@@ -1,7 +1,7 @@
 from apps.documents import ProductDocument
 from apps.models import Category, Product, ProductImage, User
 from django.core.cache import cache
-from django_elasticsearch_dsl_drf.serializers import DocumentSerializer
+# from django_elasticsearch_dsl_drf.serializers import DocumentSerializer
 from rest_framework.exceptions import ValidationError
 from rest_framework.serializers import EmailField, IntegerField, ModelSerializer, Serializer
 
@@ -11,15 +11,15 @@ class UserModelSerializer(ModelSerializer):
         model = User
         fields = 'id', 'username', 'type'
 
-class ProductDocumentSerializer(DocumentSerializer):
-    class Meta:
-        document = ProductDocument
-
-        fields = (
-            'id',
-            'name',
-            'description'
-        )
+# class ProductDocumentSerializer(DocumentSerializer):
+#     class Meta:
+#         document = ProductDocument
+#
+#         fields = (
+#             'id',
+#             'name',
+#             'description'
+#         )
 
 class ProductImageModelSerializer(ModelSerializer):
     class Meta:
