@@ -132,7 +132,7 @@ CACHES = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'G  ❤️ sevaman',
+    'TITLE': '#wick api !!!!',
     'DESCRIPTION': "good",
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
