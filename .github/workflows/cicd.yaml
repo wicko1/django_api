@@ -2,7 +2,7 @@ name: Drf P21 CI/CD Deployment
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   deploy:
