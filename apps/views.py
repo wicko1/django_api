@@ -1,35 +1,34 @@
 from random import randint
 
-from apps.documents import ProductDocument
+# from apps.documents import ProductDocument
 from apps.filters import ProductFilter
 from apps.models import Category, Product
 from apps.paginations import ProductPagination
 from apps.serializers import (
     CategoryModelSerializer,
-    ProductDocumentSerializer,
     ProductListModelSerializer,
     SendCodeMailSerializer,
     VerifyCodeSerializer,
 )
 from django.core.cache import cache
 from django.core.mail import send_mail
-from django_elasticsearch_dsl_drf.filter_backends import SearchFilterBackend, SuggesterFilterBackend
-from django_elasticsearch_dsl_drf.viewsets import DocumentViewSet
+# from django_elasticsearch_dsl_drf.filter_backends import SearchFilterBackend, SuggesterFilterBackend
+# from django_elasticsearch_dsl_drf.viewsets import DocumentViewSet
 from drf_spectacular.utils import extend_schema
 from rest_framework import status
 from rest_framework.generics import GenericAPIView, ListCreateAPIView
 from rest_framework.response import Response
 
 
-class ProductDocumentViewSet(DocumentViewSet):
-    document = ProductDocument
-    serializer_class = ProductDocumentSerializer
-
-    filter_backends = [
-        SearchFilterBackend,
-        SuggesterFilterBackend
-    ]
-    search_fields = ('name', 'description')
+# class ProductDocumentViewSet(DocumentViewSet):
+#     document = ProductDocument
+#     serializer_class = ProductDocumentSerializer
+#
+#     filter_backends = [
+#         SearchFilterBackend,
+#         SuggesterFilterBackend
+#     ]
+#     search_fields = ('name', 'description')
 
 
 @extend_schema(tags=['category'])

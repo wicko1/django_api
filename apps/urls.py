@@ -4,7 +4,6 @@ from graphene_django.views import GraphQLView
 from apps.schemas import schema
 from apps.views import (
     CategoryListCreateAPIView,
-    ProductDocumentViewSet,
     ProductListCreateAPIView,
     SendCodeAPIView,
     VerifyCodeAPIView,
@@ -14,7 +13,7 @@ from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
 
-router.register("products", ProductDocumentViewSet, "products")
+# router.register("products", ProductDocumentViewSet, "products")
 
 urlpatterns = [
     path("graphql/", csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schema))),
