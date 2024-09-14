@@ -132,7 +132,7 @@ CACHES = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': '#wick API sdsdfsf',
+    'TITLE': '#wick API nurislom',
     'DESCRIPTION': "good",
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
